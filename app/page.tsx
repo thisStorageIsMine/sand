@@ -89,7 +89,7 @@ export default function Home() {
         let col = mouseCol + i;
         let row = mouseRow + j;
 
-        if (Math.random() > 0.5) continue;
+        if ((Math.random() > 0.5) || col < 0 || row < 0) continue;
         grid.current[col][row] = hueRotate;
       }
     }
